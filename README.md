@@ -1,5 +1,5 @@
 # Multiplos Acessos ao Ambiente Seguro (Sefaz-CE)
-Projeto criado para permitir o acesso simultâneo de múltiplos usuários ao Ambiente Seguro da Sefaz-CE.
+Projeto criado para permitir o acesso **simultâneo** de **múltiplos usuários** ao Ambiente Seguro da Sefaz-CE.Tudo isso com apenas um unico Login de acesso do **tipo Contador**.
 
 ## Tecnologias
 1. Python (**3.7.4**)
