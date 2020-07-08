@@ -4,6 +4,7 @@ Projeto criado para permitir o acesso simultâneo de múltiplos usuários ao Amb
 ## Tecnologias
 1. Python (3.7.4)
    > webdriver
+   
    > selenium
    
 3. ChromeDriver (83.0.4103.39)
