@@ -10,6 +10,6 @@ Projeto criado para permitir o acesso simultâneo de múltiplos usuários ao Amb
 ## Criar executavel (**x86**) com Pyinstaler
 > python3 -m pip install pyinstaller
 
-> `DIRETORIO_BASE_DO_PYTHON3`\Scripts\pyinstaller.exe --onefile --icon=icon.ico AmbienteSeguro.py
+> `DIRETORIO_BASE_DO_PYTHON3`\Scripts\pyinstaller.exe --onefile AmbienteSeguro.py
 
 
