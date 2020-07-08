@@ -6,7 +6,6 @@ Projeto criado para permitir o acesso simultâneo de múltiplos usuários ao Amb
 
    `webdriver`
    `selenium`
-   `pickle`
    
 3. ChromeDriver (83.0.4103.39)
 
