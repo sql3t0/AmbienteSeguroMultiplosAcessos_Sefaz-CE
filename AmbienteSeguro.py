@@ -8,8 +8,8 @@ import warnings
 import selenium
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
-
 warnings.filterwarnings('ignore')
+
 # GLOBAL VALUES
 DRIVER_PATH 	 = "./driver/chromedriver.exe"
 COOKIE_PATH 	 = "./driver/cookies.pkl"
@@ -101,7 +101,7 @@ def login(browser, phanton=False):
 			except selenium.common.exceptions.UnexpectedAlertPresentException as e:
 				info('[!] Outro usuario logado fora do App !')
 				browser.execute_script("alert('[!] Outro usuario logado fora do App !');")
-				time.sleep(3)
+				time.sleep(2)
 				status = False
 				pass
 		else:
@@ -166,7 +166,6 @@ if __name__ == '__main__':
 
 		# Opcoes do ghostBrowser
 		info('[>] Iniciando Ghost Driver...')
-		gOptions = webdriver.ChromeOptions()
 		options.add_argument('--headless')
 		ghostBrowser = webdriver.Chrome(options=options, executable_path=DRIVER_PATH, service_args=["--silent",])
 
