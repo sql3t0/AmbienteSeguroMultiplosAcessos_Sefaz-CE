@@ -4,7 +4,7 @@ Projeto criado para permitir o acesso "**simultâneo**" de **múltiplos usuário
 
 ## Tecnologias
 1. Python (**3.7.4**)
-   > `selenium`  `pyinstaller`
+   > `selenium`  `pyinstaller`  `colorama`
    
 3. ChromeDriver (**83.0.4103.39**)
 
