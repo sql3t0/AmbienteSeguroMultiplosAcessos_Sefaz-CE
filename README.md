@@ -1,5 +1,5 @@
 # Multiplos Acessos ao Ambiente Seguro (Sefaz-CE)
-Projeto criado para permitir o acesso "**simultâneo**" de **múltiplos usuários** ao Ambiente Seguro da Sefaz-CE.
+Projeto criado para permitir o acesso "**simultâneo**" de **múltiplos usuários** ao [Ambiente Seguro da Sefaz-CE](https://servicos.sefaz.ce.gov.br/internet/acessoseguro/servicosenha/logarusuario/login.asp).
 > **Obs:** É necessário um unico login de acesso do tipo **Contador**(3) valido ao portal.
 
 ## Tecnologias
