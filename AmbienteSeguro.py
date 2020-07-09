@@ -8,6 +8,10 @@ import warnings
 import selenium
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
+from colorama import Fore
+from colorama import init
+init(autoreset=True)
+
 warnings.filterwarnings('ignore')
 
 # GLOBAL VALUES
@@ -16,10 +20,14 @@ COOKIE_PATH 	 = "./driver/cookies.pkl"
 CREDENCIAIS_PATH = "./driver/credenciais.txt" # O formato do arquivo deve seguir o layout ( CPF:SENHA:TIPO ) em uma unica linha, separando os valores por ':'
 
 def info(txt, breakline=True):
+	COLOR = ''
+	if '[!]' in txt: COLOR = Fore.RED
+	if '[+]' in txt: COLOR = Fore.GREEN
+	if '[.]' in txt: COLOR = Fore.YELLOW
 	if breakline:
-		sys.stdout.write(txt+'\n')
+		sys.stdout.write(COLOR+txt+'\n')
 	else:
-		sys.stdout.write(txt)
+		sys.stdout.write(COLOR+txt)
 
 def error(e):
 	print(e)
@@ -47,7 +55,7 @@ def save_cookies(browser):
 		error(e)
 
 def readCookies(browser):
-	info('[>] Carregando cookies no chrome...')
+	info('[>] Carregando cookies...')
 	try:
 		browser.delete_all_cookies()
 		cookies = pickle.load(open(COOKIE_PATH, "rb"))
@@ -101,7 +109,7 @@ def login(browser, phanton=False):
 			except selenium.common.exceptions.UnexpectedAlertPresentException as e:
 				info('[!] Outro usuario logado fora do App !')
 				browser.execute_script("alert('[!] Outro usuario logado fora do App !');")
-				time.sleep(2)
+				time.sleep(3)
 				status = False
 				pass
 		else:
@@ -117,7 +125,7 @@ def login(browser, phanton=False):
 def phantonBrownser(browser, empresa):
 	try:
 		if empresa:
-			info('\r[>] Selecionando empresa...', False)
+			info('\r[.] Selecionando empresa...', False)
 			browser.get("https://servicos.sefaz.ce.gov.br/internet/acessoSeguro/EMPRESASDOCPF/CWeb2010.Asp?SSE=1")
 			try:
 				browser.execute_script(empresa)
@@ -133,7 +141,7 @@ def setEmpOnLocalStorage(browser, storageKEY):
 	try:
 
 		if 'CWeb2010.Asp'.upper() in browser.current_url.upper():
-			info('\r[>] Injetando JS para salvar empresa selecionada...', False)
+			info('\r[.] Injetando JS para salvar empresa selecionada...', False)
 			browser.execute_script("for(var i=0; i<document.links.length; i++) { if(document.links[i].href.includes('javascript:submete')){ document.links[i].setAttribute('onclick',\"localStorage.setItem('%s',this.href.replace('javascript:',''))\"); }}"%storageKEY)
 	except Exception as e:
 		# error(e)
@@ -190,16 +198,16 @@ if __name__ == '__main__':
 						browserChrome.refresh()
 						toggleBody(browserChrome,'block') #display body
 				except selenium.common.exceptions.WebDriverException as e:
-					info('\n[>] Encerrando Ghost Browser...')
+					info('\n[.] Encerrando Ghost Browser...')
 					ghostBrowser.quit()
 					# error(e)
 					# pass
 					break
 			
-			info('[>] Encerrando Chrome Browser...')
+			info('[.] Encerrando Chrome Browser...')
 			ForceCloseApp()
 		else:
-			info('[>] Encerrando a aplicacao...')
+			info('[.] Encerrando a aplicacao...')
 			ghostBrowser.quit()
 			browserChrome.quit()
 
