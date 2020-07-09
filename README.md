@@ -4,13 +4,18 @@ Projeto criado para permitir o acesso **simultâneo** de **múltiplos usuários*
 
 ## Tecnologias
 1. Python (**3.7.4**)
-   > `selenium` `pyinstaller`
+   > `selenium`  `pyinstaller`
    
 3. ChromeDriver (**83.0.4103.39**)
 
-## Criar executavel (**x86**) com Pyinstaler
-> python3 -m pip install pyinstaller
+## Cofiguracao e uso
+1. Instale os modulos necessarios
+> python3 -m pip install -r requirements.txt
+2. Entre na pasta drivers e edite o arquivo `credenciais.txt`, colocando seus dados de acesso ao portal
+3. Execute o script
+> python3 AmbienteSeguro.py
 
-> **DIRETORIO_BASE_DO_PYTHON3**\Scripts\pyinstaller.exe --onefile AmbienteSeguro.py
+## Criar executavel (**x86**) com Pyinstaler
+> **DIRETORIO_BASE_DO_PYTHON**\Scripts\pyinstaller.exe --onefile AmbienteSeguro.py
 
 
