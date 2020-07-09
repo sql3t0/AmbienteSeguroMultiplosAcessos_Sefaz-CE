@@ -13,7 +13,7 @@ Projeto criado para permitir o acesso "**simultâneo**" de **múltiplos usuário
    > python3 -m pip install -r requirements.txt
 2. Entre na pasta `driver` e edite o arquivo `credenciais.txt`, colocando seus dados de acesso ao portal
 3. Execute o script
-   > python3 AmbienteSeguro.py
+   > python3 `AmbienteSeguro.py`
 
 ## Criar executavel (**x86**) com pyinstaller
 > **DIRETORIO_BASE_DO_PYTHON**\Scripts\pyinstaller.exe --onefile AmbienteSeguro.py
