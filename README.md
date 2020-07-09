@@ -11,7 +11,7 @@ Projeto criado para permitir o acesso "**simultâneo**" de **múltiplos usuário
 ## Cofiguracao e uso
 1. Instale os modulos necessarios
    > python3 -m pip install -r requirements.txt
-2. Entre na pasta drivers e edite o arquivo `credenciais.txt`, colocando seus dados de acesso ao portal
+2. Entre na pasta `driver` e edite o arquivo `credenciais.txt`, colocando seus dados de acesso ao portal
 3. Execute o script
    > python3 AmbienteSeguro.py
 
