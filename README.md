@@ -15,7 +15,7 @@ Projeto criado para permitir o acesso **simultâneo** de **múltiplos usuários*
 3. Execute o script
 > python3 AmbienteSeguro.py
 
-## Criar executavel (**x86**) com Pyinstaler
+## Criar executavel (**x86**) com pyInstaller
 > **DIRETORIO_BASE_DO_PYTHON**\Scripts\pyinstaller.exe --onefile AmbienteSeguro.py
 
 
